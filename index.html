@@ -1,1 +1,85 @@
-hello world
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>个人主页</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+      color: #333;
+    }
+    p {
+      color: #555;
+    }
+    .section {
+      margin-top: 30px;
+    }
+    .skills span {
+      background-color: #e0e0e0;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 20px;
+      display: inline-block;
+      font-size: 14px;
+    }
+    .contact a {
+      color: #007bff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <center>
+      <img class="avatar" src="https://via.placeholder.com/120" alt="头像" />
+      <h1>傻子</h1>
+      <p>计算机科学硕士研究生，研究方向包括图神经网络、联邦学习与对抗攻击。</p>
+    </center>
+
+    <div class="section skills">
+      <h2>技能</h2>
+      <span>Python</span>
+      <span>PyTorch</span>
+      <span>机器学习</span>
+      <span>图神经网络</span>
+      <span>深度学习</span>
+    </div>
+
+    <div class="section contact">
+      <h2>联系方式</h2>
+      <p>
+        邮箱: <a href="mailto:example@example.com">example@example.com</a><br>
+        GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a><br>
+        个人主页: <a href="#" target="_blank">点击查看</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
