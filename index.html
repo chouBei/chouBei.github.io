@@ -5,15 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>个人主页</title>
   <style>
+    /* 全局样式 */
     body {
       font-family: "Helvetica Neue", sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
     }
+    /* 左侧导航栏样式 */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+    /* 主体内容区域 */
+    .main-content {
+      margin-left: 220px;
+      padding: 40px;
+    }
     .container {
       max-width: 800px;
-      margin: 60px auto;
+      margin: 0 auto 40px auto;
       background: white;
       padding: 40px;
       border-radius: 12px;
@@ -26,16 +59,11 @@
       object-fit: cover;
       margin-bottom: 20px;
     }
-    h1 {
-      margin-top: 0;
-      font-size: 28px;
+    h1, h2 {
       color: #333;
     }
     p {
       color: #555;
-    }
-    .section {
-      margin-top: 30px;
     }
     .skills span {
       background-color: #e0e0e0;
@@ -53,26 +81,93 @@
     .contact a:hover {
       text-decoration: underline;
     }
+    /* 列表样式 */
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <center>
-      <img class="avatar" src="https://via.placeholder.com/120" alt="头像" />
-      <h1>傻子</h1>
-      <p>计算机科学硕士研究生，研究方向包括图神经网络、联邦学习与对抗攻击。</p>
-    </center>
+  <!-- 左侧导航栏 -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="#about">个人信息</a></li>
+      <li><a href="#skills">技能</a></li>
+      <li><a href="#publications">发表的论文</a></li>
+      <li><a href="#awards">获得的奖项</a></li>
+      <li><a href="#members">实验室成员</a></li>
+      <li><a href="#graduates">毕业学生去向</a></li>
+      <li><a href="#contact">联系方式</a></li>
+    </ul>
+  </div>
 
-    <div class="section skills">
-      <h2>技能</h2>
-      <span>Python</span>
-      <span>PyTorch</span>
-      <span>机器学习</span>
-      <span>图神经网络</span>
-      <span>深度学习</span>
+  <!-- 主体内容 -->
+  <div class="main-content">
+    <!-- 个人信息 -->
+    <div class="container" id="about">
+      <center>
+        <img class="avatar" src="https://via.placeholder.com/120" alt="头像" />
+        <h1>傻子</h1>
+        <p>计算机科学硕士研究生，研究方向包括图神经网络、联邦学习与对抗攻击。</p>
+      </center>
     </div>
 
-    <div class="section contact">
+    <!-- 技能 -->
+    <div class="container" id="skills">
+      <h2>技能</h2>
+      <div class="skills">
+        <span>Python</span>
+        <span>PyTorch</span>
+        <span>机器学习</span>
+        <span>图神经网络</span>
+        <span>深度学习</span>
+      </div>
+    </div>
+
+    <!-- 发表的论文 -->
+    <div class="container" id="publications">
+      <h2>发表的论文</h2>
+      <ul>
+        <li>论文标题1 - <em>期刊/会议名称</em> (年份)</li>
+        <li>论文标题2 - <em>期刊/会议名称</em> (年份)</li>
+        <li>论文标题3 - <em>期刊/会议名称</em> (年份)</li>
+      </ul>
+    </div>
+
+    <!-- 获得的奖项 -->
+    <div class="container" id="awards">
+      <h2>获得的奖项</h2>
+      <ul>
+        <li>奖项名称1 - 描述/年份</li>
+        <li>奖项名称2 - 描述/年份</li>
+      </ul>
+    </div>
+
+    <!-- 实验室成员 -->
+    <div class="container" id="members">
+      <h2>实验室成员</h2>
+      <ul>
+        <li>成员姓名1 - 职位/研究方向</li>
+        <li>成员姓名2 - 职位/研究方向</li>
+        <li>成员姓名3 - 职位/研究方向</li>
+      </ul>
+    </div>
+
+    <!-- 毕业学生去向 -->
+    <div class="container" id="graduates">
+      <h2>毕业学生去向</h2>
+      <ul>
+        <li>毕业生姓名1 - 现就职/继续深造于...(公司/机构名称)</li>
+        <li>毕业生姓名2 - 现就职/继续深造于...(公司/机构名称)</li>
+        <li>毕业生姓名3 - 现就职/继续深造于...(公司/机构名称)</li>
+      </ul>
+    </div>
+
+    <!-- 联系方式 -->
+    <div class="container" id="contact">
       <h2>联系方式</h2>
       <p>
         邮箱: <a href="mailto:example@example.com">example@example.com</a><br>
